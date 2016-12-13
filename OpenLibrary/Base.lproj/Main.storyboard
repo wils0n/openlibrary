@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nle-4u-JKq">
+                                <rect key="frame" x="0.0" y="39" width="320" height="548"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2A-a9-SBH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" placeholder="ISBN write" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-6J-PiP">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="50"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="R7H-sg-sNd"/>
+                                                </connections>
+                                            </searchBar>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6m-QN-8nm">
+                                                <rect key="frame" x="260" y="0.0" width="60" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="Dwh-zY-zRW"/>
+                                                </constraints>
+                                                <state key="normal" title="limpiar"/>
+                                                <connections>
+                                                    <action selector="limpiarSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQJ-hz-BTZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I4c-s4-cfT">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="498"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nle-4u-JKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LlN-sW-Xhn"/>
+                            <constraint firstItem="nle-4u-JKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PFH-gg-Dgu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nle-4u-JKq" secondAttribute="bottom" id="QG4-NR-g6U"/>
+                            <constraint firstItem="nle-4u-JKq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WZK-hv-2rj"/>
+                            <constraint firstAttribute="trailing" secondItem="nle-4u-JKq" secondAttribute="trailing" constant="154" id="do7-0x-xKi"/>
+                            <constraint firstItem="nle-4u-JKq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dqM-x0-L3a"/>
+                            <constraint firstItem="nle-4u-JKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kJt-u0-OSP"/>
+                            <constraint firstAttribute="bottom" secondItem="nle-4u-JKq" secondAttribute="bottom" id="qRG-2F-iEW"/>
+                            <constraint firstAttribute="trailing" secondItem="nle-4u-JKq" secondAttribute="trailing" id="sUx-66-Y9w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mySearchBar" destination="YOS-6J-PiP" id="3FM-Ax-aGO"/>
+                        <outlet property="resultTextView" destination="I4c-s4-cfT" id="6vP-IP-O6t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="122.53521126760563"/>
+        </scene>
+    </scenes>
+</document>
